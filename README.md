@@ -1,144 +1,119 @@
-# **README — Windows Pro Mode Ultimate Script**
+# **Windows 11 Pro 25H2 – ULTIMATE PRO MODE + HARD MODE + TPM PRIVACY + CLASSIC UI**
 
-## **Purpose**
+**Clean. Fast. Local. No Ads. No Copilot. No Bing. No Cloud Telemetry. No Dark Patterns.**
 
-This script configures Windows to behave like a **reliable professional workstation** instead of a **consumer-targeted device**.
+This configuration turns Windows 11 Pro into what it **should** have shipped as:
 
-Windows ships with:
+* A **local-first**, **private**, **stable**, **professional workstation**
+* Without Microsoft trying to steer you into **Microsoft accounts**, **Copilot**, **adware**, **OneDrive lock-in**, **cloud logs**, or **app auto-provisioning**
 
-* Preinstalled promotional apps (bloatware)
-* Advertising and “suggested” content in the Start menu and lock screen
-* Microsoft cloud account nudging and OneDrive pre-integration
-* Bing + web search results in the local Search menu
-* Automatic updates that may reboot without warning
+This script is designed for:
 
-These defaults are useful for brand-new or casual users, but they create **friction** for people who work seriously in Windows:
-
+* Performance users
+* Creatives
 * Developers
-* Power users
-* Engineers
-* IT maintainers
-* Users moving from macOS or Linux expecting coherent tooling
+* IT professionals
+* People who **want control back** over their system
 
-The goal of this script is to provide a **predictable, quiet, local-first Windows environment** that does not interrupt work or re-install software you removed.
+And for anyone who thinks:
 
----
+> *“Windows 11 feels like a billboard and a data funnel.”*
 
-## **What This Script Does**
+This turns it back into:
 
-### **1. Permanently Removes Bloatware**
-
-Windows normally re-installs promotional apps during updates or new user sign-ins.
-This script removes:
-
-* Installed apps
-* **And** the *provisioned* copies hidden in the system base image
-
-This stops bloat from returning **even after major Windows updates**.
-
-### **2. Disables Consumer Experience / Advertising System**
-
-Windows contains a system that restores apps and pushes promotional tiles.
-This script turns that system **off**, so:
-
-* No Start menu ads
-* No “recommended” installs
-* No Microsoft promotional banners
-
-Windows stops trying to market software to you.
-
-### **3. Removes OneDrive and Prevents It From Reinstalling**
-
-If you don’t want OneDrive:
-
-* The client is removed
-* Leftover folders are deleted
-* Group Policy prevents it from reinstalling
-
-Local file usage becomes clean and predictable.
-
-### **4. Disables Bing and Web Search in Start**
-
-This makes Search:
-
-* Faster
-* Private
-* Local-first
-* Not dependent on online queries
-
-This prevents “web suggestions” and “shopping results” from appearing when searching for files.
-
-### **5. Minimizes Telemetry (as far as allowed on Windows Home/Pro)**
-
-Telemetry is reduced to its **lowest officially supported level** without breaking activation or Windows Update.
-
-### **6. Stops Forced Update Reboots**
-
-Updates are set to:
-
-* **Notify before downloading**
-* **Never reboot automatically**
-
-The system no longer interrupts work or restarts unexpectedly.
-
-### **7. Installs and Enables Real Command-Line Tools**
-
-The script installs:
-
-* Windows Terminal
-* Git
-* OpenSSH
-* Updated PowerShell
-
-This provides a dependable, modern CLI environment similar to macOS or Linux setups, without needing manual setup.
+> **Windows 7 Pro energy**, but modern + secure.
 
 ---
 
-## **What This Script Does *Not* Do**
+## ✅ **What This Script Does**
 
-* It does **not** break Windows Update.
-* It does **not** disable security protections.
-* It does **not** modify the kernel or system integrity.
-* It does **not** reduce stability.
-* It does **not** remove features needed by most organizations.
-
-This is a **safe, reversible configuration**, not a “registry delete smash-hammer.”
-
----
-
-## **Intended Audience**
-
-This configuration is beneficial for users who:
-
-* Prefer local control over cloud defaults
-* Want a clean, distraction-free desktop
-* Do development or system administration
-* Want predictable system behavior
-* Do not want advertising embedded into the OS
-
-If your workflow is:
-
-* Programming
-* Creative production
-* Engineering
-* Terminal-driven computing
-* System maintenance
-  then this configuration aligns well with your needs.
+| Category                                 | Action                                             | Why It Matters                                            |
+| ---------------------------------------- | -------------------------------------------------- | --------------------------------------------------------- |
+| Bloatware                                | Removes provisioned + installed junk               | Stops auto reappearing apps                               |
+| Xbox/Junk Respawn                        | Disables scheduled app reinstalls                  | Windows stops reinstalling trash silently                 |
+| OneDrive                                 | Fully removed + blocked                            | You control your storage again                            |
+| Bing / Web Search                        | Disabled everywhere                                | Search = local files only, not Microsoft servers          |
+| Copilot / WebExperience / Recall backend | Removed and *blocked*                              | No cloud AI indexing of private data                      |
+| UI Ads / Store Promotions                | Disabled                                           | No random suggestions, popups, “Try Edge!”                |
+| Telemetry                                | Set to **minimum** allowed in Pro                  | OS stops sending diagnostic content                       |
+| Windows Update                           | Notify-only                                        | No surprise downloads, no forced reboots while working    |
+| Winget                                   | Non-interactive auto-accept mode                   | Silent installs, fully automated workstation setup        |
+| TPM Usage                                | **Sandboxed** / Reduced trust signals              | Prevents TPM from automatically binding identity to cloud |
+| Search                                   | Locked to offline mode                             | Fast local indexing, zero network chatter                 |
+| Classic UI                               | Brings back classic right-click + cleaner explorer | No chaotic Win11 UI experiments mid-task                  |
 
 ---
 
-## **Summary**
+## 🧠 **TPM Privacy Sandbox — What That Means**
 
-This script transforms Windows into what many users *assume* a “Pro” edition should provide out of the box:
+This script **does NOT disable TPM.**
+TPM is still used for:
 
-| Before                             | After                                    |
-| ---------------------------------- | ---------------------------------------- |
-| Promotional apps & suggestions     | Clean, stable desktop                    |
-| Web search mixed into local search | Local, fast, predictable search          |
-| Automatic update interruptions     | User-scheduled updates only              |
-| OneDrive forced integration        | Local-only file control                  |
-| Inconsistent command line tools    | Modern and complete terminal environment |
+* Secure boot
+* Disk encryption keys
+* Keychain protection
 
+But we **block the cloud-facing parts**, preventing TPM from being used for:
+
+* Device Attestation to Microsoft identity systems
+* Auto-binding Windows to Microsoft Accounts
+* Silent cloud-based compliance scoring
+* Remote trust telemetry reporting
+
+**Your machine remains secure — just not enrolled in Microsoft’s “trust pipeline”.**
+
+---
+
+## 🎨 **Classic UI Mode Included**
+
+This restores the **professional desktop workflow**:
+
+* Classic right-click menu
+* Explorer shows all folders sidebar
+* Proper status bar
+* Drag & drop to taskbar restored
+* Taskbar aligned left like Windows 7/10
+* **Open-Shell** installed for clean Start menu without ads or app suggestions
+
+Your desktop becomes:
+
+> Quiet, predictable, and respectful.
+
+---
+
+## ⚠️ Requirements
+
+* **Run as Administrator**
+* Windows 11 Pro 25H2 or newer
+* Restart after script completes
+
+This script does **not modify system files**, **does not weaken security**, and **is fully reversible** via Group Policy reset.
+
+---
+
+## 🚀 How To Run
+
+Right-click → Run as Administrator:
+
+```
+powershell.exe -ExecutionPolicy Bypass -File .\UltimateProMode.ps1
+```
+
+---
+
+## 🎯 Result After Running
+
+You get a system that:
+
+* Feels **stable like Windows 7**
+* Runs **fast like Windows 10 LTSC**
+* Looks **clean and minimal**
+* Respects your **privacy and workflow**
+* Never nags you
+* Never auto-installs junk
+* Never phones home for search queries
+
+The OS becomes **your tool again**, not someone’s platform for ads + behavioral data.
 This is not about *hacking* Windows.
 It is about **letting Windows respect the person using it**.
 
