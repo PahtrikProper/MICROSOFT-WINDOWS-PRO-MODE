@@ -1,6 +1,8 @@
 # **Windows 11 Pro 25H2 – ULTIMATE PRO MODE + HARD MODE + TPM PRIVACY + CLASSIC UI**
-
 **Clean. Fast. Local. No Ads. No Copilot. No Bing. No Cloud Telemetry. No Dark Patterns.**
+
+<img width="1022" height="769" alt="image" src="https://github.com/user-attachments/assets/ff380a2b-50f1-4816-a5b2-53f8ecaba8a0" />
+
 
 This configuration turns Windows 11 Pro into what it **should** have shipped as:
 
